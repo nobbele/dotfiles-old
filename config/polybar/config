@@ -56,6 +56,8 @@ menu-0-0 = Logout
 menu-0-0-exec = i3-msg exit
 menu-0-1 = Shutdown
 menu-0-1-exec = systemctl poweroff
+menu-0-2 = Reboot
+menu-0-2-exec = systemctl reboot
 
 [module/i3]
 type = internal/i3
