@@ -174,11 +174,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        status_command i3status
-}
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 bindsym Ctrl+Print exec maim -s /tmp/screen.png && imgurbash2 /tmp/screen.png
 bindsym Print exec maim /tmp/screen.png && imgurbash2 /tmp/screen.png
@@ -193,3 +189,5 @@ for_window [class="^Steam$" title="^Settings$"] floating enable
 exec "setxkbmap -layout se"
 
 new_window pixel 0
+
+exec --no-startup-id feh --bg-scale ~/.config/i3/bg.png

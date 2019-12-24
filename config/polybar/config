@@ -1,0 +1,110 @@
+[colors]
+
+bg = #10101000
+fg = #f8f8f2
+select = #44475a
+blue = #6272a4
+cyan = #8be9fd
+pink = #ff79c6
+purple = #bd93f9
+green = #50fa7b
+orange = #ffb86c
+red = #ff5555
+yellow = #f1fa8c
+
+background = ${colors.bg}
+background-alt = ${colors.select}
+
+foreground = ${colors.fg}
+foreground-alt = ${colors.select}
+primary = ${colors.purple}
+secondary = ${colors.cyan}
+alert = ${colors.pink}
+
+[bar/bar]
+width = 100%
+height = 20
+fixed-center = true
+offset-x = 0%
+offset-y = 0%
+
+background = #00000000
+foreground = ${colors.foreground}
+
+line-size = 4
+
+padding-left = 0
+padding-right = 0
+
+modules-left = menu i3
+modules-center = datetime
+modules-right = memory cpu network
+
+[module/menu]
+type = custom/menu
+
+format-padding = 2
+format-spacing = 2
+
+label-open = Menu
+label-close = Close
+label-separator = |
+
+expand_right = true
+
+menu-0-0 = Logout
+menu-0-0-exec = i3exit logout2
+menu-0-1 = Shutdown
+menu-0-1-exec = systemctl poweroff
+
+[module/i3]
+type = internal/i3
+
+format-padding = 2
+
+enable-scroll = false
+
+label-focused-foreground = ${colors.foreground}
+label-focused-background = ${colors.select}
+
+label-focused-padding = 2
+label-unfocused-padding = 2
+label-visible-padding = 2
+
+label-separator = |
+label-separator-padding = 2
+
+[module/datetime]
+type = internal/date
+
+interval = 60
+
+date = %b %d %Y (%a week %V)
+time = %H:%M
+
+label = %date% | %time%
+
+[module/memory]
+type = internal/memory
+
+interval = 5
+
+label = %gb_used%/%gb_total% (%percentage_used%%) RAM
+
+[module/cpu]
+type = internal/cpu
+
+format-padding = 5
+
+interval = 5
+
+label = %percentage%% CPU
+
+[module/network]
+type = internal/network
+interface = ${env:NETWORK_INTERFACE:enp1s0}
+
+interval = 5
+
+label-connected = ONLINE (%local_ip%)
+label-disconnected OFFLINE
