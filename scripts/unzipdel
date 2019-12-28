@@ -1,0 +1,5 @@
+#!/bin/sh
+for file in "$@"
+do
+  unzip "$file" && rm "$file"
+done

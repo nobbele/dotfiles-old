@@ -40,6 +40,8 @@ modules-left = menu i3
 modules-center = datetime
 modules-right = memory cpu network
 
+monitor = ${env:MONITOR:}
+
 [module/menu]
 type = custom/menu
 

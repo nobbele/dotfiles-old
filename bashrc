@@ -11,6 +11,8 @@ PS1='\[\033[01;35m\]\u\[\033[01;30m\]@\[\033[01;32m\]\h\[\033[00m\]:\[\033[01;34
 export LANG=en_US.UTF-8
 export LC_MESSAGES="C"
 
+export PATH="~/.scripts:${PATH}"
+
 # Custom scripts
 if [ -f $HOME/.bashrc_custom ]; then
   source $HOME/.bashrc_custom
