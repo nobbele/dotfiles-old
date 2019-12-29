@@ -174,6 +174,27 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+##
+# move floating windows with keys
+bindsym $mod+m mode "move" focus floating
+mode "move" {
+    bindsym $mod+Tab focus right
+
+    bindsym Left  move left
+    bindsym Down  move down
+    bindsym Up    move up
+    bindsym Right move right
+
+    bindsym h     move left
+    bindsym j     move down
+    bindsym k     move up
+    bindsym l     move right
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 bindsym Ctrl+Print exec maim -s /tmp/screen.png && imgurbash2 /tmp/screen.png
@@ -188,6 +209,8 @@ for_window [class="^Steam$" title="^Friends List$"] floating enable
 for_window [class="^Steam$" title="^Steam Library Folders$"] floating enable
 for_window [class="^Steam$" title="^Create or select new Steam library folder:$"] floating enable
 for_window [class="^Steam$" title="^Settings$"] floating enable 
+
+for_window [class="platformer"] floating enable
 
 exec "setxkbmap -layout se"
 

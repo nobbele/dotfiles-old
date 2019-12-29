@@ -1,0 +1,7 @@
+#!/bin/bash
+f=$1
+ext=""; 
+[[ $f =~ \. ]] && ext="."${f#*.};
+g="${f%%.*}"_bwr$ext
+convert "$f" -colorspace Gray -resize $2\! $g
+echo "Output: $g"
