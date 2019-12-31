@@ -83,7 +83,7 @@ type = internal/date
 
 interval = 60
 
-date = %b %d %Y (%a week %V)
+date = %b %d %Y (%a week %W)
 time = %H:%M
 
 label = %date% | %time%
