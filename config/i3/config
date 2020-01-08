@@ -202,6 +202,7 @@ bindsym Print exec maim /tmp/screen.png && imgurbash2 /tmp/screen.png
 
 bindsym $mod+p move workspace to output right
 bindsym $mod+o move workspace to output left
+bindsym $mod+b border toggle
 
 ## Steam
 ## https://github.com/ValveSoftware/steam-for-linux/issues/1040
@@ -210,10 +211,10 @@ for_window [class="^Steam$" title="^Steam Library Folders$"] floating enable
 for_window [class="^Steam$" title="^Create or select new Steam library folder:$"] floating enable
 for_window [class="^Steam$" title="^Settings$"] floating enable 
 
-for_window [class="platformer"] floating enable
+for_window [title="Floating"] floating enable
 
 exec "setxkbmap -layout se"
 
-new_window pixel 0
+default_border pixel 0
 
 exec --no-startup-id feh --bg-scale ~/.config/i3/bg.png
