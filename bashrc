@@ -17,3 +17,7 @@ export PATH="~/.scripts:${PATH}"
 if [ -f $HOME/.bashrc_custom ]; then
   source $HOME/.bashrc_custom
 fi
+
+if [ -f $HOME/.bash_aliases ]; then
+  source $HOME/.bash_aliases
+fi

@@ -204,6 +204,10 @@ bindsym $mod+p move workspace to output right
 bindsym $mod+o move workspace to output left
 bindsym $mod+b border toggle
 
+bindsym $mod+F1 exec firefox
+bindsym $mod+F11 exec discord
+bindsym $mod+F12 exec steam
+
 ## Steam
 ## https://github.com/ValveSoftware/steam-for-linux/issues/1040
 for_window [class="^Steam$" title="^Friends List$"] floating enable
