@@ -21,4 +21,4 @@ fi
 if [ -f $HOME/.bash_aliases ]; then
   source $HOME/.bash_aliases
 fi
-export MSBuildSDKsPath="/opt/dotnet/sdk/3.0.100/Sdks/"
+export MSBuildSDKsPath="/opt/dotnet/sdk/$(dotnet --version)/Sdks/"

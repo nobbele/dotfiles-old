@@ -103,6 +103,8 @@ label-urgent-background = ${colors.my_background}
 label-urgent-underline = ${colors.my_color8}
 label-urgent-padding = 2
 
+enable-scroll = false
+
 [module/musicinfo]
 type = custom/script
 
