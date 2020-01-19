@@ -59,7 +59,6 @@ font-1 = monofur:fontformat=truetype:size=11;1
 
 modules-left = i3 xwindow
 modules-center = date
-modules-right = musicinfo
 
 tray-position = right
 tray-padding = 9
@@ -104,16 +103,6 @@ label-urgent-underline = ${colors.my_color8}
 label-urgent-padding = 2
 
 enable-scroll = false
-
-[module/musicinfo]
-type = custom/script
-
-exec = ~/.config/polybar/music.sh
-interval = 5
-format = <label>
-label = %output:0:30:...%
-format-padding = 10
-format-foreground = ${colors.my_color2}
 
 [module/date]
 type = internal/date
