@@ -195,6 +195,10 @@ mode "move" {
     bindsym Escape mode "default"
 }
 
+# Workspaces
+set $ws1 1
+set $ws2 2
+
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 bindsym Ctrl+Print exec maim -s /tmp/screen.png && imgurbash2 /tmp/screen.png
@@ -214,6 +218,9 @@ for_window [class="^Steam$" title="^Friends List$"] floating enable
 for_window [class="^Steam$" title="^Steam Library Folders$"] floating enable
 for_window [class="^Steam$" title="^Create or select new Steam library folder:$"] floating enable
 for_window [class="^Steam$" title="^Settings$"] floating enable
+
+assign [class="Discord"] $ws1
+assign [class="Steam"] $ws2
 
 for_window [title="Floating"] floating enable
 
