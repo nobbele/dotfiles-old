@@ -208,7 +208,7 @@ bindsym $mod+p move workspace to output right
 bindsym $mod+o move workspace to output left
 bindsym $mod+b border toggle
 
-bindsym $mod+F1 exec brave
+bindsym $mod+F1 exec firefox
 bindsym $mod+F11 exec discord
 bindsym $mod+F12 exec steam
 
