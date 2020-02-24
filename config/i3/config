@@ -195,6 +195,9 @@ mode "move" {
     bindsym Escape mode "default"
 }
 
+gaps inner 5
+gaps outer 2
+
 # Workspaces
 set $ws1 1
 set $ws2 2
@@ -226,6 +229,6 @@ for_window [title="Floating"] floating enable
 
 exec "setxkbmap -layout se"
 
-default_border pixel 0
+for_window [class=".*"] border pixel 1
 
 exec --no-startup-id feh --bg-scale ~/.config/i3/bg.png
