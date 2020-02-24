@@ -1,2 +1,2 @@
 alias mc='minecraft-launcher'
-alias cddotf='cd projects/dotfiles'
+alias cddotf='cd $HOME/projects/dotfiles'
