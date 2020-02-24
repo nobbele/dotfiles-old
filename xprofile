@@ -4,7 +4,6 @@ if [ -f $HOME/.custom_xprofile ]; then
   source $HOME/.custom_xprofile
 fi
 
-autocutsel -fork &
 ibus-daemon -drx
 copyq &
 picom &
