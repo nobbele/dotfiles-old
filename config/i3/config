@@ -201,8 +201,8 @@ set $ws2 2
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-bindsym Ctrl+Print exec maim -s /tmp/screen.png && imgurbash2 /tmp/screen.png
-bindsym Print exec maim /tmp/screen.png && imgurbash2 /tmp/screen.png
+bindsym Ctrl+Print exec maim -s --format png | copyq copy image/png -
+bindsym Print exec maim --format png | copyq copy image/png -
 
 bindsym $mod+p move workspace to output right
 bindsym $mod+o move workspace to output left

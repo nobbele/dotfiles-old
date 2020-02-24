@@ -6,6 +6,7 @@ fi
 
 autocutsel -fork &
 ibus-daemon -drx
+copyq &
 
 discord &
 steam &
