@@ -1,2 +1,4 @@
 set clipboard=unnamed
-syntax on
+syntax enable
+filetype plugin on
+set nocompatible
