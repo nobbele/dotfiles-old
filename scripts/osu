@@ -4,5 +4,9 @@ export STAGING_AUDIO_DURATION=40000
 
 export PATH=/opt/wine-osu/bin:$PATH
 
+if [ $# -eq 1 ]; then
+  mv "$1" ~/games/'osu!'/Songs/
+fi
+
 cd ~/games/osu!
-wine osu!.exe "$@"
+wine osu!.exe
