@@ -7,7 +7,7 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'bling/vim-airline'
+Plugin 'itchyny/lightline.vim'
 
 Plugin 'preservim/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
@@ -43,5 +43,10 @@ let g:easytags_dynamic_files = 2
 let g:easytags_resolve_links = 1
 let g:easytags_suppress_ctags_warning = 1
 
-map <C-n> :NERDTreeToggle<CR>
-map <C-f> :TagBarToggle<CR>
+set laststatus=2
+set ve+=onemore
+
+autocmd BufRead * let &l:modifiable = !&readonly
+
+cmap <C-n> :NERDTreeToggle<CR>
+cmap <C-f> :TagbarToggle<CR>
