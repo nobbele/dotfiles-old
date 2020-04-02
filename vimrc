@@ -18,6 +18,10 @@ Plugin 'xolox/vim-easytags'
 Plugin 'majutsushi/tagbar'
 Plugin 'universal-ctags/ctags'
 
+Plugin 'OmniSharp/omnisharp-vim'
+Plugin 'ycm-core/YouCompleteMe'
+
+
 call vundle#end()
 
 filetype plugin indent on
@@ -48,5 +52,5 @@ set ve+=onemore
 
 autocmd BufRead * let &l:modifiable = !&readonly
 
-cmap <C-n> :NERDTreeToggle<CR>
-cmap <C-f> :TagbarToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
+map <C-f> :TagbarToggle<CR>

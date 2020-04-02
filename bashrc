@@ -19,5 +19,4 @@ fi
 if [ -f $HOME/.bash_aliases ]; then
   source $HOME/.bash_aliases
 fi
-export MSBuildSDKsPath="/usr/share/dotnet/sdk/$(dotnet --version)/Sdks/"
 export PATH=$HOME/.scripts:$PATH
