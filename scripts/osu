@@ -1,7 +1,9 @@
 #!/bin/sh
+export WINEARCH=win32
+export vblank_mode=0
 export WINEPREFIX="$HOME/.wine_osu"
 export STAGING_AUDIO_DURATION=50000
-
+export PULSE_LATENCY_MSEC=40
 export PATH=/opt/wine-osu/bin:$PATH
 
 if [ $# -eq 1 ]; then
