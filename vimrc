@@ -1,56 +1,30 @@
 set nocompatible
 
-filetype off
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'gmarik/Vundle.vim'
-
-Plugin 'itchyny/lightline.vim'
-
-Plugin 'preservim/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'scrooloose/syntastic' 
-Plugin 'jez/vim-superman'
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
-Plugin 'majutsushi/tagbar'
-Plugin 'universal-ctags/ctags'
-
-Plugin 'OmniSharp/omnisharp-vim'
-Plugin 'ycm-core/YouCompleteMe'
-
-
-call vundle#end()
-
+execute pathogen#infect()
+syntax on
 filetype plugin indent on
 
-set backspace=indent,eol,start
-set ruler
-set number
-set showcmd
-set incsearch
-set hlsearch
+let g:ycm_rust_src_path="/home/nobbele/development/rust-master/src"
 
-set clipboard=unamed
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+autocmd BufEnter * NERDTreeMirror
 
-syntax on
+"CTRL-t to toggle tree view with CTRL-t
+nmap <silent> <C-t> :NERDTreeToggle<CR>
+"Set F2 to put the cursor to the nerdtree
+nmap <silent> <F2> :NERDTreeFind<CR>
+"CTRL-P to toggle terminal
+tnoremap <silent> <C-P> <C-w>:ToggleTerminal<CR>
+nnoremap <silent> <C-P> :ToggleTerminal<CR>
 
+"Terminal options
+let g:toggle_terminal#command = 'fish'
+let g:toggle_terminal#position = 'botright'
+
+"enable mouse support
 set mouse=a
-
-set tags=./tags;,~/.vimtags
-
-let g:easytags_events = ['BufReadPost','BufWritePost']
-let g:easytags_async = 1
-let g:easytags_dynamic_files = 2
-let g:easytags_resolve_links = 1
-let g:easytags_suppress_ctags_warning = 1
-
+set number
+set splitbelow
+set hlsearch
 set laststatus=2
-set ve+=onemore
-
-autocmd BufRead * let &l:modifiable = !&readonly
-
-map <C-n> :NERDTreeToggle<CR>
-map <C-f> :TagbarToggle<CR>

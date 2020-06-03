@@ -207,8 +207,6 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 bindsym Ctrl+Print exec maim -s --format png | copyq copy image/png -
 bindsym Print exec maim --format png | copyq copy image/png -
 
-bindsym $mod+p move workspace to output right
-bindsym $mod+o move workspace to output left
 bindsym $mod+b border toggle
 
 bindsym $mod+F1 exec firefox
@@ -234,3 +232,5 @@ for_window [class=".*"] border pixel 1
 exec --no-startup-id feh --bg-scale ~/.config/i3/bg.png
 
 bindsym Shift+$mod+p exec power-menu
+
+bindsym $mod+p exec passmenu
